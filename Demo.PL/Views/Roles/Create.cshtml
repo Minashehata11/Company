@@ -1,0 +1,35 @@
+﻿@model ApplicationRole
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+
+
+<div class="row">
+    <div class="col-6">
+        <form asp-action="Create" asp-controller="Roles">
+
+           
+            <div class="form-group">
+                <label asp-for="@Model.Name" class="col-form-label"> name</label>
+                <input asp-for="@Model.Name" class="form-control" />
+                <span asp-validation-for="@Model.Name" class="text-danger"></span>
+
+            </div>
+           
+
+            <br />
+            <input type="submit" value="Add" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+        </form>
+
+    </div>
+    @section Scripts{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+</div>

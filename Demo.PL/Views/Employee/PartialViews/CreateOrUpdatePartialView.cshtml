@@ -1,0 +1,42 @@
+﻿@model EmployeeViewModel
+@{
+    var Departemnts = new SelectList(ViewBag.departmets, "Id", "Name");
+}
+<div class="form-group">
+    <label asp-for="@Model.Name" class="col-form-label"> </label>
+    <input asp-for="@Model.Name" class="form-control" />
+    <span asp-validation-for="@Model.Name" class="text-danger"></span>
+
+</div>
+<div class="form-group">
+    <label asp-for="@Model.Salary" class="col-form-label"> </label>
+    <input asp-for="@Model.Salary" class="form-control" />
+    <span asp-validation-for="@Model.Salary" class="text-danger"></span>
+
+</div>
+
+<div class="form-group">
+    <label asp-for="@Model.Address" class="col-form-label"> </label>
+    <input asp-for="@Model.Address" class="form-control" />
+    <span asp-validation-for="@Model.Address" class="text-danger"></span>
+
+</div>
+<div class="form-group">
+    <label asp-for="@Model.Email" class="col-form-label"> </label>
+    <input asp-for="@Model.Email" class="form-control" />
+    <span asp-validation-for="@Model.Email" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="@Model.DepartmentId" class="col-form-label"> </label>
+    <select asp-for="@Model.DepartmentId" asp-items="Departemnts" class="form-control">
+        <option>--select Department--</option>
+
+    </select>
+    <span asp-validation-for="@Model.DepartmentId" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="@Model.File" class="col-form-label"> </label>
+    <input type="file" asp-for="@Model.File" class="form-control"/>
+</div>
+
+<br />
